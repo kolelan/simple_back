@@ -8,4 +8,4 @@ COPY ./conf.d /usr/local/etc/php/conf.d
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer --quiet
 
-WORKDIR /app
+WORKDIR /app/lara
