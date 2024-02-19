@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[BdsController::class,'index']);
+Route::get('/{bb}',[BdsController::class,'detail']);
