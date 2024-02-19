@@ -25,6 +25,5 @@ services:
   app-php-cli:
     build:
       context: app/docker/development/php-cli
-    tty: true
     volumes:
       - ./app:/app
