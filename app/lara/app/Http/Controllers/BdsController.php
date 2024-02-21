@@ -8,7 +8,12 @@ use Illuminate\Http\Request;
 class BdsController extends Controller
 {
     public function index(){
-        $context = ['bbs'=>Bb::latest()->get()];
+        try{
+            $context = ['bbs'=>Bb::latest()->get(),'url'=>env('APP_URL', 'http://localhost:8199')];
+        }catch (Exception $e){
+            $context = ['bbs'=>[],'error'=>true,'message'=>$e->getMessage()];
+        }
+
         return view('index',$context);
     }
     public function detail(Bb $bb) {

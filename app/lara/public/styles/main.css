@@ -1,0 +1,5 @@
+.logo {
+    width: 120px;
+    height: 80px;
+    background: url("/images/logo_120_80.png") left / auto 100% no-repeat;
+}

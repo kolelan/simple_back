@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[BdsController::class,'index']);
-Route::get('/{bb}',[BdsController::class,'detail']);
+Route::get('/',[BdsController::class,'index'])->name('index');
+Route::get('/{bb}',[BdsController::class,'detail'])->name('detail');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
